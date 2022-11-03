@@ -2,4 +2,4 @@
 
 (using directory-targets 0.1)
 
-(name melange-opam-template)
+(name melange-opam-hackerrank)
