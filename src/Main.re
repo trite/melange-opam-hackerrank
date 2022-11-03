@@ -1,1 +1,5 @@
-Js.log("Hello world");
+let something =
+  123
+  |> Int.toString;
+
+Js.log("Hello world" ++ something);
