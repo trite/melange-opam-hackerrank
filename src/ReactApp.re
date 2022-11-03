@@ -3,10 +3,15 @@ module App = {
   // Melange has been installed correctly for JS bundlers to be able to find it.
   [@react.component]
   let make = () =>
-    ["Hello world!", "This is React!"]
-    ->Belt.List.map(greeting => <h1> greeting->React.string </h1>)
-    ->Belt.List.toArray
-    ->React.array;
+    // This fails, I think because it's the wrong kind of List? (std vs Relude)
+    // ["Hello world!", "This is React!"]
+    // |> List.map(greeting => <h1> {greeting |> React.string} </h1>)
+    [|"Hello world!", "This is React!"|]
+    |> Array.map(greeting => <h1> {greeting |> React.string} </h1>)
+    |> React.array;
+    // ->Belt.List.map(greeting => <h1> greeting->React.string </h1>)
+    // ->Belt.List.toArray
+    // ->React.array;
 };
 
 ReactDOM.querySelector("#root")
