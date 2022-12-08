@@ -6,7 +6,7 @@
     "dir": "src"
   },
   "package-specs": {
-    "module": "es6"
+    "module": "commonjs"
   },
   "suffix": ".bs.js",
   "reason": {
