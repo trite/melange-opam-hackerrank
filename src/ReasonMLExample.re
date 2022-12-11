@@ -9,3 +9,6 @@ let prepend = x => "Result: " ++ x;
 |> string_of_int
 |> prepend
 |> Js.log;
+
+// let test = (x: list(list(string))) =>
+//   x |> List.map(List.reverse);
